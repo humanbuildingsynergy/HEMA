@@ -1,0 +1,45 @@
+# HEMA - Home Energy Management Assistant
+# Core dependencies
+
+# LangChain Core
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# LangGraph
+langgraph>=0.2.0
+langgraph-checkpoint-sqlite>=1.0.0
+
+# LLM Providers (install the ones you need)
+# Default: Ollama (local LLM - no API key required)
+langchain-ollama>=0.2.0
+
+# Optional: Cloud LLM providers (uncomment as needed)
+langchain-openai>=0.2.0          # OpenAI (GPT-4, GPT-3.5)
+langchain-google-genai>=2.0.0    # Google (Gemini)
+langchain-anthropic>=0.3.0       # Anthropic (Claude)
+
+# FastAPI Backend
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+websockets>=12.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# RAG (Retrieval-Augmented Generation)
+langchain-chroma>=0.1.0           # ChromaDB vector store
+chromadb>=0.4.0                   # Vector database
+langchain-text-splitters>=0.3.0  # Document chunking
+pypdf>=4.0.0                      # PDF loading
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+protobuf>=4.25.0                  # Pin version to avoid GetPrototype warnings
+
+# Development (optional)
+# pytest>=7.0.0
+# black>=23.0.0
+# ruff>=0.1.0

@@ -1,0 +1,43 @@
+.env
+energy_analysis.log
+_archive
+__pycache__/
+deprecated
+
+# Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+
+# Evaluation outputs (results folders, not source code)
+evaluation/results/
+
+# RAG vector index (generated from knowledge_base documents, auto-rebuilds on first run)
+data/vector_index/
+
+# Private content
+manuscript/
+
+# Internal documentation (team notes, audit trails)
+docs/
+
+# LaTeX artifacts (if any leak outside manuscript/)
+*.synctex.gz
+
+# Testing folder (test data, outputs - not part of public release)
+testing_public_release/

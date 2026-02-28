@@ -1,0 +1,14 @@
+appliance_name,threshold_kw
+HVAC unit,0.65
+Electric vehicle charger,0.5
+Washing machine,0.08
+Dishwasher,0.10
+Clothes dryer,2.0
+Microwave,0.80
+Oven,1.5
+Cooktop,0.05
+Pool pump,0.4
+Refrigerator,0.15
+Electric water heater,0.20
+Kitchen sink garbage disposal,0.008
+Solar power generation,0.05

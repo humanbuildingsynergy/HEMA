@@ -1,0 +1,1274 @@
+{
+  "home_id": "demo_home",
+  "home_name": "Sample Smart Home",
+  "location": {
+    "timezone": "America/Phoenix",
+    "climate_zone": "Hot-Dry",
+    "utility_provider": "Sample Utility Provider"
+  },
+  "last_updated": "2026-02-28T03:28:39.506039",
+  "devices": {
+    "hvac": {
+      "device_id": "hvac_001",
+      "display_name": "Central HVAC System",
+      "device_type": "hvac",
+      "manufacturer": "Carrier",
+      "model": "Infinity 26 with Greenspeed Intelligence",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "heating",
+        "cooling",
+        "fan_control",
+        "humidity_control",
+        "scheduling",
+        "geofencing"
+      ],
+      "current_state": {
+        "power": "on",
+        "mode": "cool",
+        "current_temperature_f": 76,
+        "target_temperature_f": 74,
+        "humidity_percent": 35,
+        "fan_mode": "auto",
+        "system_status": "cooling",
+        "filter_status": "good",
+        "filter_life_remaining_percent": 78
+      },
+      "settings": {
+        "temperature_range_f": {
+          "min": 60,
+          "max": 85
+        },
+        "modes": [
+          "off",
+          "cool",
+          "heat",
+          "auto",
+          "fan_only"
+        ],
+        "fan_modes": [
+          "auto",
+          "on",
+          "circulate"
+        ],
+        "humidity_control_enabled": true,
+        "target_humidity_range": {
+          "min": 30,
+          "max": 50
+        }
+      },
+      "schedules": {
+        "enabled": true,
+        "weekday": [
+          {
+            "time": "06:00",
+            "target_temp_f": 72,
+            "mode": "cool"
+          },
+          {
+            "time": "08:00",
+            "target_temp_f": 78,
+            "mode": "cool"
+          },
+          {
+            "time": "17:00",
+            "target_temp_f": 74,
+            "mode": "cool"
+          },
+          {
+            "time": "22:00",
+            "target_temp_f": 76,
+            "mode": "cool"
+          }
+        ],
+        "weekend": [
+          {
+            "time": "08:00",
+            "target_temp_f": 74,
+            "mode": "cool"
+          },
+          {
+            "time": "22:00",
+            "target_temp_f": 76,
+            "mode": "cool"
+          }
+        ]
+      },
+      "control_actions": [
+        {
+          "action": "set_temperature",
+          "params": [
+            "target_temp_f"
+          ],
+          "description": "Set target temperature"
+        },
+        {
+          "action": "set_mode",
+          "params": [
+            "mode"
+          ],
+          "description": "Change HVAC mode"
+        },
+        {
+          "action": "set_fan_mode",
+          "params": [
+            "fan_mode"
+          ],
+          "description": "Change fan operation mode"
+        },
+        {
+          "action": "set_schedule",
+          "params": [
+            "schedule_data"
+          ],
+          "description": "Update schedule"
+        },
+        {
+          "action": "enable_away_mode",
+          "params": [],
+          "description": "Enable away/vacation mode"
+        },
+        {
+          "action": "disable_away_mode",
+          "params": [],
+          "description": "Return to normal operation"
+        }
+      ]
+    },
+    "ev_charger": {
+      "device_id": "ev_charger_001",
+      "display_name": "EV Charger - Garage",
+      "device_type": "ev_charger",
+      "manufacturer": "ChargePoint",
+      "model": "Home Flex",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "level2_charging",
+        "scheduling",
+        "power_sharing",
+        "load_management"
+      ],
+      "current_state": {
+        "power": "standby",
+        "vehicle_connected": true,
+        "charging_status": "scheduled",
+        "current_power_kw": 0,
+        "session_energy_kwh": 0,
+        "vehicle_battery_percent": 45,
+        "estimated_full_charge_time": "05:30",
+        "scheduled_start_time": "22:00",
+        "max_charge_rate_kw": 9.6
+      },
+      "settings": {
+        "charge_levels": [
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "max_amperage": 48,
+        "voltage": 240,
+        "charge_limit_percent": 80,
+        "departure_time_enabled": true,
+        "default_departure_time": "07:00"
+      },
+      "schedules": {
+        "enabled": true,
+        "charge_windows": [
+          {
+            "start": "22:00",
+            "end": "06:00",
+            "max_rate_kw": 9.6,
+            "priority": "off_peak"
+          },
+          {
+            "start": "12:00",
+            "end": "16:00",
+            "max_rate_kw": 4.8,
+            "priority": "solar_excess"
+          }
+        ]
+      },
+      "control_actions": [
+        {
+          "action": "start_charging",
+          "params": [],
+          "description": "Start charging immediately"
+        },
+        {
+          "action": "stop_charging",
+          "params": [],
+          "description": "Stop current charging session"
+        },
+        {
+          "action": "set_charge_limit",
+          "params": [
+            "limit_percent"
+          ],
+          "description": "Set battery charge limit"
+        },
+        {
+          "action": "set_schedule",
+          "params": [
+            "start_time",
+            "end_time"
+          ],
+          "description": "Set charging schedule"
+        },
+        {
+          "action": "set_departure_time",
+          "params": [
+            "departure_time"
+          ],
+          "description": "Set departure time for smart charging"
+        },
+        {
+          "action": "set_max_rate",
+          "params": [
+            "rate_kw"
+          ],
+          "description": "Limit charging power"
+        }
+      ]
+    },
+    "washing_machine": {
+      "device_id": "washer_001",
+      "display_name": "Washing Machine - Laundry Room",
+      "device_type": "washing_machine",
+      "manufacturer": "LG",
+      "model": "WM4000HWA ThinQ",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "remote_start",
+        "cycle_monitoring",
+        "delay_start",
+        "notifications"
+      ],
+      "current_state": {
+        "power": "standby",
+        "door_locked": false,
+        "current_cycle": null,
+        "cycle_progress_percent": 0,
+        "time_remaining_minutes": 0,
+        "water_temperature": null,
+        "spin_speed": null
+      },
+      "settings": {
+        "cycles": [
+          "normal",
+          "heavy_duty",
+          "delicates",
+          "quick_wash",
+          "bulky_items",
+          "sanitize",
+          "allergiene"
+        ],
+        "temperatures": [
+          "cold",
+          "warm",
+          "hot",
+          "tap_cold",
+          "extra_hot"
+        ],
+        "spin_speeds": [
+          "no_spin",
+          "low",
+          "medium",
+          "high",
+          "extra_high"
+        ],
+        "soil_levels": [
+          "light",
+          "normal",
+          "heavy",
+          "extra_heavy"
+        ],
+        "delay_start_max_hours": 19
+      },
+      "control_actions": [
+        {
+          "action": "start_cycle",
+          "params": [
+            "cycle_type",
+            "temperature",
+            "spin_speed"
+          ],
+          "description": "Start wash cycle"
+        },
+        {
+          "action": "delay_start",
+          "params": [
+            "delay_hours",
+            "cycle_type"
+          ],
+          "description": "Schedule delayed start"
+        },
+        {
+          "action": "pause_cycle",
+          "params": [],
+          "description": "Pause current cycle"
+        },
+        {
+          "action": "cancel_cycle",
+          "params": [],
+          "description": "Cancel current cycle"
+        }
+      ]
+    },
+    "dishwasher": {
+      "device_id": "dishwasher_001",
+      "display_name": "Dishwasher - Kitchen",
+      "device_type": "dishwasher",
+      "manufacturer": "Bosch",
+      "model": "SHPM88Z75N 800 Series",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "remote_start",
+        "cycle_monitoring",
+        "delay_start",
+        "leak_detection"
+      ],
+      "current_state": {
+        "power": "standby",
+        "door_open": false,
+        "current_cycle": null,
+        "cycle_progress_percent": 0,
+        "time_remaining_minutes": 0,
+        "rinse_aid_level": "adequate",
+        "salt_level": "adequate"
+      },
+      "settings": {
+        "cycles": [
+          "auto",
+          "heavy",
+          "normal",
+          "express",
+          "rinse",
+          "half_load",
+          "eco",
+          "sanitize"
+        ],
+        "options": [
+          "extra_dry",
+          "sanitize",
+          "speed_perfect",
+          "half_load"
+        ],
+        "delay_start_max_hours": 24
+      },
+      "control_actions": [
+        {
+          "action": "start_cycle",
+          "params": [
+            "cycle_type",
+            "options"
+          ],
+          "description": "Start dishwasher cycle"
+        },
+        {
+          "action": "delay_start",
+          "params": [
+            "delay_hours",
+            "cycle_type"
+          ],
+          "description": "Schedule delayed start"
+        },
+        {
+          "action": "cancel_cycle",
+          "params": [],
+          "description": "Cancel current cycle"
+        }
+      ]
+    },
+    "clothes_dryer": {
+      "device_id": "dryer_001",
+      "display_name": "Clothes Dryer - Laundry Room",
+      "device_type": "clothes_dryer",
+      "manufacturer": "LG",
+      "model": "DLEX4000W ThinQ",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "fuel_type": "electric",
+      "capabilities": [
+        "remote_start",
+        "cycle_monitoring",
+        "sensor_dry",
+        "steam_refresh",
+        "notifications"
+      ],
+      "current_state": {
+        "power": "standby",
+        "door_open": false,
+        "current_cycle": null,
+        "cycle_progress_percent": 0,
+        "time_remaining_minutes": 0,
+        "lint_filter_status": "clean",
+        "exhaust_flow_status": "good"
+      },
+      "settings": {
+        "cycles": [
+          "normal",
+          "heavy_duty",
+          "delicates",
+          "towels",
+          "bedding",
+          "speed_dry",
+          "air_dry",
+          "steam_fresh"
+        ],
+        "heat_levels": [
+          "no_heat",
+          "low",
+          "medium",
+          "high"
+        ],
+        "dryness_levels": [
+          "damp",
+          "less_dry",
+          "normal",
+          "more_dry",
+          "very_dry"
+        ],
+        "delay_start_max_hours": 19
+      },
+      "control_actions": [
+        {
+          "action": "start_cycle",
+          "params": [
+            "cycle_type",
+            "heat_level",
+            "dryness_level"
+          ],
+          "description": "Start dryer cycle"
+        },
+        {
+          "action": "delay_start",
+          "params": [
+            "delay_hours",
+            "cycle_type"
+          ],
+          "description": "Schedule delayed start"
+        },
+        {
+          "action": "pause_cycle",
+          "params": [],
+          "description": "Pause current cycle"
+        },
+        {
+          "action": "cancel_cycle",
+          "params": [],
+          "description": "Cancel current cycle"
+        },
+        {
+          "action": "extend_time",
+          "params": [
+            "minutes"
+          ],
+          "description": "Add drying time"
+        }
+      ]
+    },
+    "microwave": {
+      "device_id": "microwave_001",
+      "display_name": "Microwave - Kitchen",
+      "device_type": "microwave",
+      "manufacturer": "GE",
+      "model": "JES1657SMSS",
+      "smart_enabled": false,
+      "connection_status": "not_connected",
+      "capabilities": [
+        "manual_operation"
+      ],
+      "current_state": {
+        "power": "standby",
+        "door_open": false
+      },
+      "control_actions": []
+    },
+    "oven_1": {
+      "device_id": "oven_001",
+      "display_name": "Wall Oven - Upper",
+      "device_type": "oven",
+      "manufacturer": "GE Profile",
+      "model": "PTD9000SNSS",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "remote_preheat",
+        "temperature_monitoring",
+        "timer",
+        "air_fry",
+        "notifications"
+      ],
+      "current_state": {
+        "power": "off",
+        "door_open": false,
+        "current_mode": null,
+        "current_temperature_f": 70,
+        "target_temperature_f": null,
+        "preheat_complete": false,
+        "timer_remaining_minutes": 0
+      },
+      "settings": {
+        "modes": [
+          "bake",
+          "convection_bake",
+          "broil",
+          "convection_broil",
+          "air_fry",
+          "proof",
+          "warm"
+        ],
+        "temperature_range_f": {
+          "min": 170,
+          "max": 550
+        },
+        "broil_levels": [
+          "low",
+          "high"
+        ]
+      },
+      "control_actions": [
+        {
+          "action": "preheat",
+          "params": [
+            "mode",
+            "temperature_f"
+          ],
+          "description": "Start preheating"
+        },
+        {
+          "action": "set_timer",
+          "params": [
+            "minutes"
+          ],
+          "description": "Set cook timer"
+        },
+        {
+          "action": "turn_off",
+          "params": [],
+          "description": "Turn off oven"
+        },
+        {
+          "action": "set_temperature",
+          "params": [
+            "temperature_f"
+          ],
+          "description": "Adjust temperature"
+        }
+      ]
+    },
+    "oven_2": {
+      "device_id": "oven_002",
+      "display_name": "Wall Oven - Lower",
+      "device_type": "oven",
+      "manufacturer": "GE Profile",
+      "model": "PTD9000SNSS",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "remote_preheat",
+        "temperature_monitoring",
+        "timer",
+        "notifications"
+      ],
+      "current_state": {
+        "power": "off",
+        "door_open": false,
+        "current_mode": null,
+        "current_temperature_f": 68,
+        "target_temperature_f": null,
+        "preheat_complete": false,
+        "timer_remaining_minutes": 0
+      },
+      "settings": {
+        "modes": [
+          "bake",
+          "convection_bake",
+          "broil",
+          "convection_broil",
+          "proof",
+          "warm"
+        ],
+        "temperature_range_f": {
+          "min": 170,
+          "max": 550
+        },
+        "broil_levels": [
+          "low",
+          "high"
+        ]
+      },
+      "control_actions": [
+        {
+          "action": "preheat",
+          "params": [
+            "mode",
+            "temperature_f"
+          ],
+          "description": "Start preheating"
+        },
+        {
+          "action": "set_timer",
+          "params": [
+            "minutes"
+          ],
+          "description": "Set cook timer"
+        },
+        {
+          "action": "turn_off",
+          "params": [],
+          "description": "Turn off oven"
+        },
+        {
+          "action": "set_temperature",
+          "params": [
+            "temperature_f"
+          ],
+          "description": "Adjust temperature"
+        }
+      ]
+    },
+    "pool_pump": {
+      "device_id": "pool_pump_001",
+      "display_name": "Pool Pump - Backyard",
+      "device_type": "pool_pump",
+      "manufacturer": "Pentair",
+      "model": "IntelliFlo VSF",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "variable_speed",
+        "scheduling",
+        "freeze_protection",
+        "priming"
+      ],
+      "current_state": {
+        "power": "on",
+        "current_speed_rpm": 1800,
+        "current_flow_gpm": 45,
+        "current_power_kw": 0.8,
+        "water_temperature_f": 82,
+        "filter_pressure_psi": 12,
+        "run_time_today_hours": 4.5
+      },
+      "settings": {
+        "speed_range_rpm": {
+          "min": 450,
+          "max": 3450
+        },
+        "preset_speeds": [
+          {
+            "name": "low",
+            "rpm": 1100,
+            "description": "Filtration - off-peak"
+          },
+          {
+            "name": "medium",
+            "rpm": 1800,
+            "description": "Normal filtration"
+          },
+          {
+            "name": "high",
+            "rpm": 2800,
+            "description": "Vacuuming/cleaning"
+          },
+          {
+            "name": "max",
+            "rpm": 3450,
+            "description": "Spa jets/water features"
+          }
+        ],
+        "freeze_protection_threshold_f": 36
+      },
+      "schedules": {
+        "enabled": true,
+        "programs": [
+          {
+            "name": "morning_filter",
+            "start": "05:00",
+            "duration_hours": 3,
+            "speed": "low"
+          },
+          {
+            "name": "midday_filter",
+            "start": "11:00",
+            "duration_hours": 2,
+            "speed": "medium"
+          },
+          {
+            "name": "evening_filter",
+            "start": "20:00",
+            "duration_hours": 2,
+            "speed": "low"
+          }
+        ]
+      },
+      "control_actions": [
+        {
+          "action": "set_speed",
+          "params": [
+            "speed_rpm"
+          ],
+          "description": "Set pump speed"
+        },
+        {
+          "action": "set_preset",
+          "params": [
+            "preset_name"
+          ],
+          "description": "Use preset speed"
+        },
+        {
+          "action": "turn_on",
+          "params": [
+            "speed_rpm"
+          ],
+          "description": "Turn on pump"
+        },
+        {
+          "action": "turn_off",
+          "params": [],
+          "description": "Turn off pump"
+        },
+        {
+          "action": "run_for_duration",
+          "params": [
+            "duration_hours",
+            "speed_rpm"
+          ],
+          "description": "Run for specific time"
+        },
+        {
+          "action": "set_schedule",
+          "params": [
+            "schedule_data"
+          ],
+          "description": "Update pump schedule"
+        }
+      ]
+    },
+    "cooktop": {
+      "device_id": "cooktop_001",
+      "display_name": "Induction Cooktop - Kitchen",
+      "device_type": "cooktop",
+      "manufacturer": "Bosch",
+      "model": "NIT8069UC Benchmark",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "power_monitoring",
+        "timer",
+        "pan_detection",
+        "notifications"
+      ],
+      "current_state": {
+        "power": "standby",
+        "burners": [
+          {
+            "id": 1,
+            "active": false,
+            "power_level": 0,
+            "pan_detected": false
+          },
+          {
+            "id": 2,
+            "active": false,
+            "power_level": 0,
+            "pan_detected": false
+          },
+          {
+            "id": 3,
+            "active": false,
+            "power_level": 0,
+            "pan_detected": false
+          },
+          {
+            "id": 4,
+            "active": false,
+            "power_level": 0,
+            "pan_detected": false
+          },
+          {
+            "id": 5,
+            "active": false,
+            "power_level": 0,
+            "pan_detected": false
+          }
+        ],
+        "total_power_kw": 0,
+        "child_lock": false
+      },
+      "settings": {
+        "power_levels": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          "boost"
+        ],
+        "burner_power_ratings_kw": [
+          1.4,
+          1.8,
+          2.2,
+          3.3,
+          3.7
+        ],
+        "max_total_power_kw": 7.4,
+        "auto_shutoff_minutes": 120
+      },
+      "control_actions": [
+        {
+          "action": "set_burner_power",
+          "params": [
+            "burner_id",
+            "power_level"
+          ],
+          "description": "Set burner power level"
+        },
+        {
+          "action": "turn_off_burner",
+          "params": [
+            "burner_id"
+          ],
+          "description": "Turn off specific burner"
+        },
+        {
+          "action": "turn_off_all",
+          "params": [],
+          "description": "Turn off all burners"
+        },
+        {
+          "action": "set_timer",
+          "params": [
+            "burner_id",
+            "minutes"
+          ],
+          "description": "Set burner timer"
+        }
+      ]
+    },
+    "refrigerator": {
+      "device_id": "fridge_001",
+      "display_name": "Refrigerator - Kitchen",
+      "device_type": "refrigerator",
+      "manufacturer": "Samsung",
+      "model": "RF28R7551SR Family Hub",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "capabilities": [
+        "temperature_control",
+        "door_monitoring",
+        "ice_maker_control",
+        "power_cool",
+        "notifications"
+      ],
+      "current_state": {
+        "power": "on",
+        "fridge_temp_f": 37,
+        "freezer_temp_f": 0,
+        "fridge_door_open": false,
+        "freezer_door_open": false,
+        "ice_maker_on": true,
+        "ice_level": "adequate",
+        "water_filter_status": "good",
+        "water_filter_life_percent": 65,
+        "power_cool_active": false,
+        "power_freeze_active": false
+      },
+      "settings": {
+        "fridge_temp_range_f": {
+          "min": 34,
+          "max": 44
+        },
+        "freezer_temp_range_f": {
+          "min": -8,
+          "max": 5
+        },
+        "recommended_fridge_temp_f": 37,
+        "recommended_freezer_temp_f": 0
+      },
+      "control_actions": [
+        {
+          "action": "set_fridge_temp",
+          "params": [
+            "temperature_f"
+          ],
+          "description": "Set refrigerator temperature"
+        },
+        {
+          "action": "set_freezer_temp",
+          "params": [
+            "temperature_f"
+          ],
+          "description": "Set freezer temperature"
+        },
+        {
+          "action": "toggle_ice_maker",
+          "params": [
+            "enabled"
+          ],
+          "description": "Turn ice maker on/off"
+        },
+        {
+          "action": "activate_power_cool",
+          "params": [],
+          "description": "Rapid cool after loading groceries"
+        },
+        {
+          "action": "activate_power_freeze",
+          "params": [],
+          "description": "Rapid freeze"
+        }
+      ]
+    },
+    "water_heater": {
+      "device_id": "water_heater_001",
+      "display_name": "Electric Water Heater - Utility Room",
+      "device_type": "water_heater",
+      "manufacturer": "Rheem",
+      "model": "PROPH50 T2 RH350 ProTerra",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "technology": "heat_pump_hybrid",
+      "tank_capacity_gallons": 50,
+      "capabilities": [
+        "scheduling",
+        "vacation_mode",
+        "leak_detection",
+        "energy_tracking",
+        "demand_response"
+      ],
+      "current_state": {
+        "power": "on",
+        "mode": "heat_pump",
+        "current_water_temp_f": 118,
+        "target_water_temp_f": 120,
+        "heating_status": "idle",
+        "energy_today_kwh": 2.1,
+        "leak_detected": false,
+        "element_status": "healthy"
+      },
+      "settings": {
+        "modes": [
+          "heat_pump",
+          "hybrid",
+          "electric",
+          "vacation",
+          "off"
+        ],
+        "temperature_range_f": {
+          "min": 95,
+          "max": 140
+        },
+        "vacation_mode_temp_f": 60,
+        "legionella_prevention_enabled": true
+      },
+      "schedules": {
+        "enabled": true,
+        "programs": [
+          {
+            "name": "morning_boost",
+            "time": "05:00",
+            "target_temp_f": 125,
+            "mode": "hybrid"
+          },
+          {
+            "name": "daytime",
+            "time": "09:00",
+            "target_temp_f": 115,
+            "mode": "heat_pump"
+          },
+          {
+            "name": "evening_boost",
+            "time": "17:00",
+            "target_temp_f": 120,
+            "mode": "hybrid"
+          },
+          {
+            "name": "night",
+            "time": "22:00",
+            "target_temp_f": 110,
+            "mode": "heat_pump"
+          }
+        ]
+      },
+      "control_actions": [
+        {
+          "action": "set_temperature",
+          "params": [
+            "temperature_f"
+          ],
+          "description": "Set water temperature"
+        },
+        {
+          "action": "set_mode",
+          "params": [
+            "mode"
+          ],
+          "description": "Change operating mode"
+        },
+        {
+          "action": "enable_vacation_mode",
+          "params": [
+            "return_date"
+          ],
+          "description": "Enable vacation mode"
+        },
+        {
+          "action": "disable_vacation_mode",
+          "params": [],
+          "description": "Return to normal operation"
+        },
+        {
+          "action": "boost_now",
+          "params": [],
+          "description": "Temporarily boost to max temperature"
+        },
+        {
+          "action": "set_schedule",
+          "params": [
+            "schedule_data"
+          ],
+          "description": "Update heating schedule"
+        }
+      ]
+    },
+    "garbage_disposal": {
+      "device_id": "disposal_001",
+      "display_name": "Garbage Disposal - Kitchen Sink",
+      "device_type": "garbage_disposal",
+      "manufacturer": "InSinkErator",
+      "model": "Evolution Excel",
+      "smart_enabled": false,
+      "connection_status": "not_connected",
+      "capabilities": [
+        "manual_operation"
+      ],
+      "current_state": {
+        "power": "standby"
+      },
+      "control_actions": []
+    },
+    "solar_system": {
+      "device_id": "solar_001",
+      "display_name": "Solar PV System - Roof",
+      "device_type": "solar_inverter",
+      "manufacturer": "Enphase",
+      "model": "IQ8+ Microinverters",
+      "smart_enabled": true,
+      "connection_status": "online",
+      "system_capacity_kw": 8.4,
+      "panel_count": 21,
+      "capabilities": [
+        "production_monitoring",
+        "consumption_monitoring",
+        "grid_export_control"
+      ],
+      "current_state": {
+        "producing": true,
+        "current_production_kw": 5.2,
+        "production_today_kwh": 28.5,
+        "production_month_kwh": 890,
+        "grid_export_kw": 2.1,
+        "self_consumption_percent": 60,
+        "system_status": "normal",
+        "panels_reporting": 21
+      },
+      "control_actions": [
+        {
+          "action": "limit_export",
+          "params": [
+            "max_export_kw"
+          ],
+          "description": "Limit grid export power"
+        },
+        {
+          "action": "enable_full_export",
+          "params": [],
+          "description": "Allow full grid export"
+        }
+      ]
+    }
+  },
+  "device_groups": {
+    "high_power_appliances": [
+      "hvac",
+      "ev_charger",
+      "water_heater",
+      "clothes_dryer",
+      "pool_pump"
+    ],
+    "kitchen_appliances": [
+      "dishwasher",
+      "microwave",
+      "oven_1",
+      "oven_2",
+      "cooktop",
+      "refrigerator",
+      "garbage_disposal"
+    ],
+    "laundry_appliances": [
+      "washing_machine",
+      "clothes_dryer"
+    ],
+    "smart_controllable": [
+      "hvac",
+      "ev_charger",
+      "washing_machine",
+      "dishwasher",
+      "clothes_dryer",
+      "oven_1",
+      "oven_2",
+      "pool_pump",
+      "cooktop",
+      "refrigerator",
+      "water_heater",
+      "solar_system"
+    ],
+    "schedulable": [
+      "hvac",
+      "ev_charger",
+      "washing_machine",
+      "dishwasher",
+      "clothes_dryer",
+      "pool_pump",
+      "water_heater"
+    ],
+    "demand_response_capable": [
+      "hvac",
+      "ev_charger",
+      "water_heater",
+      "pool_pump"
+    ]
+  },
+  "automation_rules": [
+    {
+      "rule_id": "dr_precool",
+      "name": "Pre-cool Before Peak",
+      "trigger": {
+        "type": "time",
+        "value": "14:00"
+      },
+      "conditions": [
+        {
+          "device": "hvac",
+          "property": "mode",
+          "operator": "equals",
+          "value": "cool"
+        }
+      ],
+      "actions": [
+        {
+          "device": "hvac",
+          "action": "set_temperature",
+          "params": {
+            "target_temp_f": 72
+          }
+        }
+      ],
+      "description": "Pre-cool house before TOU peak period (3-8pm)"
+    },
+    {
+      "rule_id": "dr_peak_setback",
+      "name": "Peak Hour Setback",
+      "trigger": {
+        "type": "time",
+        "value": "15:00"
+      },
+      "conditions": [],
+      "actions": [
+        {
+          "device": "hvac",
+          "action": "set_temperature",
+          "params": {
+            "target_temp_f": 78
+          }
+        }
+      ],
+      "description": "Raise setpoint during TOU peak period"
+    },
+    {
+      "rule_id": "ev_offpeak",
+      "name": "EV Off-Peak Charging",
+      "trigger": {
+        "type": "time",
+        "value": "22:00"
+      },
+      "conditions": [
+        {
+          "device": "ev_charger",
+          "property": "vehicle_connected",
+          "operator": "equals",
+          "value": true
+        }
+      ],
+      "actions": [
+        {
+          "device": "ev_charger",
+          "action": "start_charging",
+          "params": {}
+        }
+      ],
+      "description": "Start EV charging at off-peak rate start"
+    },
+    {
+      "rule_id": "pool_offpeak",
+      "name": "Pool Pump Off-Peak Schedule",
+      "trigger": {
+        "type": "time",
+        "value": "05:00"
+      },
+      "conditions": [],
+      "actions": [
+        {
+          "device": "pool_pump",
+          "action": "set_preset",
+          "params": {
+            "preset_name": "low"
+          }
+        }
+      ],
+      "description": "Run pool pump at low speed during off-peak hours"
+    },
+    {
+      "rule_id": "solar_ev",
+      "name": "Solar Excess to EV",
+      "trigger": {
+        "type": "condition",
+        "device": "solar_system",
+        "property": "grid_export_kw",
+        "operator": "greater_than",
+        "value": 3.0
+      },
+      "conditions": [
+        {
+          "device": "ev_charger",
+          "property": "vehicle_connected",
+          "operator": "equals",
+          "value": true
+        }
+      ],
+      "actions": [
+        {
+          "device": "ev_charger",
+          "action": "start_charging",
+          "params": {
+            "rate_kw": 4.8
+          }
+        }
+      ],
+      "description": "Use excess solar production to charge EV"
+    }
+  ]
+}
