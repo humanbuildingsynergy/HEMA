@@ -143,10 +143,10 @@ function ChatArea({
                   <Zap className="w-10 h-10 text-white" />
                 </div>
                 <h1 className="text-2xl font-semibold text-bear-text-light dark:text-bear-text-dark mb-2">
-                  Welcome to BEMA
+                  Welcome to HEMA
                 </h1>
                 <p className="text-bear-text-secondary-light dark:text-bear-text-secondary-dark">
-                  Building Energy Management Assistant
+                  Home Energy Management Assistant
                 </p>
               </div>
 

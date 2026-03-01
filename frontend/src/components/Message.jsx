@@ -35,7 +35,7 @@ function Message({ message }) {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
               <span className="font-medium text-sm text-bear-text-light dark:text-bear-text-dark">
-                {isUser ? 'You' : 'BEMA'}
+                {isUser ? 'You' : 'HEMA'}
               </span>
             </div>
 

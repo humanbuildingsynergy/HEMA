@@ -52,7 +52,7 @@ function Sidebar({
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-semibold text-bear-text-light dark:text-bear-text-dark">
-                  BEMA
+                  HEMA
                 </span>
               </div>
               <button
