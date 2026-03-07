@@ -33,7 +33,7 @@ def main():
         test_queries = [
             "Hello, what can you help me with?",
             "Analyze my energy consumption patterns",  # Should redirect - no data loaded
-            "Load data from data/home_power/home_9922.csv",
+            "Load data from data/home_power/energy_data_sample.csv",
             "Now analyze my energy consumption patterns",
             "What are my peak usage hours?",
             "Give me recommendations to reduce energy costs",

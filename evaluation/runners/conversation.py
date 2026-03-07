@@ -139,30 +139,30 @@ class ConversationRunner:
             turn_count = 1
             while max_turns is None or turn_count < max_turns:
                 # Get HEMA's response with performance tracking
-                bear_result = self._get_bear_response(user_turn.message)
-                bear_response = bear_result["response"]
+                hema_result = self._get_hema_response(user_turn.message)
+                hema_response = hema_result["response"]
 
                 self._record_turn(
                     speaker="system",
-                    message=bear_response,
-                    latency_ms=bear_result["latency_ms"],
-                    agent_used=bear_result["agent_used"],
-                    tools_called=bear_result["tools_called"],
-                    had_error=bear_result["had_error"],
-                    classification_result=bear_result["classification_result"],
-                    input_tokens=bear_result.get("input_tokens", 0),
-                    output_tokens=bear_result.get("output_tokens", 0),
+                    message=hema_response,
+                    latency_ms=hema_result["latency_ms"],
+                    agent_used=hema_result["agent_used"],
+                    tools_called=hema_result["tools_called"],
+                    had_error=hema_result["had_error"],
+                    classification_result=hema_result["classification_result"],
+                    input_tokens=hema_result.get("input_tokens", 0),
+                    output_tokens=hema_result.get("output_tokens", 0),
                 )
 
                 if self.verbose:
-                    latency_info = f" ({bear_result['latency_ms']:.0f}ms"
-                    if bear_result["agent_used"]:
-                        latency_info += f", {bear_result['agent_used']}"
+                    latency_info = f" ({hema_result['latency_ms']:.0f}ms"
+                    if hema_result["agent_used"]:
+                        latency_info += f", {hema_result['agent_used']}"
                     latency_info += ")"
-                    print(f"[HEMA]{latency_info} {bear_response}\n")
+                    print(f"[HEMA]{latency_info} {hema_response}\n")
 
                 # Get user's next response (natural follow-ups or wrap-up)
-                user_turn = self.simulated_user.respond_to_system(bear_response)
+                user_turn = self.simulated_user.respond_to_system(hema_response)
                 self._record_turn(
                     "user",
                     user_turn.message,
@@ -229,7 +229,7 @@ class ConversationRunner:
             total_duration_seconds=total_duration,
         )
 
-    def _get_bear_response(self, user_message: str) -> Dict[str, Any]:
+    def _get_hema_response(self, user_message: str) -> Dict[str, Any]:
         """
         Get response from the HEMA system with performance tracking.
 

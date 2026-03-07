@@ -38,14 +38,6 @@ function ChatInput({ onSendMessage, isLoading, onStopGeneration }) {
           <div className="flex items-end gap-2 p-2 rounded-2xl border border-hema-border-light dark:border-hema-border-dark bg-hema-input-light dark:bg-hema-input-dark focus-within:border-hema-primary focus-within:ring-1 focus-within:ring-hema-primary transition-all">
             {/* Attachment button (placeholder for future) */}
             <button
-              type="button"
-              className="p-2 rounded-lg hover:bg-hema-hover-light dark:hover:bg-hema-hover-dark transition-colors text-hema-text-secondary-light dark:text-hema-text-secondary-dark"
-              aria-label="Attach file"
-              title="Attach file (coming soon)"
-            >
-              <Paperclip className="w-5 h-5" />
-            </button>
-
             {/* Textarea */}
             <textarea
               ref={textareaRef}

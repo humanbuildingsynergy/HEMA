@@ -101,7 +101,7 @@ function ChatArea({
         }]
         onUpdateMessages(currentMessages)
       } else {
-        console.error('Chat error:', error)
+        
         // Show error message
         const errorMessages = [
           ...updatedMessages,

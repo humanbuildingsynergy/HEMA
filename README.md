@@ -178,7 +178,7 @@ DEFAULT_THRESHOLDS_FILE = "data/home_power/appliance_thresholds_sample.csv"
 
 **Using Your Own Data:**
 
-To use your own energy data, replace the files in `data/home_power/` and `data/utility_rate/` with your data. See [data/DATA_FORMAT.md](data/DATA_FORMAT.md) for the required format and structure.
+To use your own energy data, replace the files in `data/home_power/` and `data/utility_rate/` with your data. See [data/README.md](data/README.md) for the required format and structure.
 
 ## Quick Start (5 minutes)
 
@@ -197,7 +197,7 @@ cd frontend && npm run dev
 #      "How can I reduce peak hour consumption?"
 ```
 
-**That's it!** HEMA is ready to use with sample data. See [data/DATA_FORMAT.md](data/DATA_FORMAT.md) to use your own energy data.
+**That's it!** HEMA is ready to use with sample data. See [data/README.md](data/README.md) to use your own energy data.
 
 ## Running the Application
 
