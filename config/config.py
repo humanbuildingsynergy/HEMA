@@ -79,7 +79,7 @@ class Config:
     DEFAULT_THRESHOLDS_FILE = "data/home_power/appliance_thresholds_sample.csv"
 
     # Weather Configuration
-    # Default to Austin, TX where Pecan Street energy data was collected
+    # Default to Austin, TX (sample data location)
     DEFAULT_LOCATION = os.getenv("HOME_LOCATION", "Austin, TX")
     WEATHER_CACHE_TTL = 600  # Cache weather data for 10 minutes
 

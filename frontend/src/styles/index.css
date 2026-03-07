@@ -84,11 +84,11 @@ html {
 }
 
 .message-content blockquote {
-  @apply border-l-4 border-bear-primary pl-4 italic my-3;
+  @apply border-l-4 border-hema-primary pl-4 italic my-3;
 }
 
 .message-content a {
-  @apply text-bear-primary hover:underline;
+  @apply text-hema-primary hover:underline;
 }
 
 /* Typing indicator animation */
@@ -131,12 +131,12 @@ html {
 
 /* Focus styles */
 input:focus, textarea:focus, button:focus {
-  @apply outline-none ring-2 ring-bear-primary ring-opacity-50;
+  @apply outline-none ring-2 ring-hema-primary ring-opacity-50;
 }
 
 /* Custom button styles */
 .btn-primary {
-  @apply bg-bear-primary hover:bg-bear-primary-dark text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  @apply bg-hema-primary hover:bg-hema-primary-dark text-white font-medium py-2 px-4 rounded-lg transition-colors;
 }
 
 .btn-secondary {

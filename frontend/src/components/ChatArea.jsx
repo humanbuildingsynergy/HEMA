@@ -139,13 +139,13 @@ function ChatArea({
             <div className="max-w-2xl w-full">
               {/* Logo and title */}
               <div className="text-center mb-8">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-bear-primary to-bear-primary-dark flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-hema-primary to-hema-primary-dark flex items-center justify-center">
                   <Zap className="w-10 h-10 text-white" />
                 </div>
-                <h1 className="text-2xl font-semibold text-bear-text-light dark:text-bear-text-dark mb-2">
+                <h1 className="text-2xl font-semibold text-hema-text-light dark:text-hema-text-dark mb-2">
                   Welcome to HEMA
                 </h1>
-                <p className="text-bear-text-secondary-light dark:text-bear-text-secondary-dark">
+                <p className="text-hema-text-secondary-light dark:text-hema-text-secondary-dark">
                   Home Energy Management Assistant
                 </p>
               </div>
@@ -156,21 +156,21 @@ function ChatArea({
                   <button
                     key={index}
                     onClick={() => handleSuggestionClick(suggestion.prompt)}
-                    className="p-4 rounded-xl border border-bear-border-light dark:border-bear-border-dark
-                      bg-bear-bg-light dark:bg-bear-bg-dark
-                      hover:bg-bear-hover-light dark:hover:bg-bear-hover-dark
-                      hover:border-bear-primary/50
+                    className="p-4 rounded-xl border border-hema-border-light dark:border-hema-border-dark
+                      bg-hema-bg-light dark:bg-hema-bg-dark
+                      hover:bg-hema-hover-light dark:hover:bg-hema-hover-dark
+                      hover:border-hema-primary/50
                       transition-all text-left group"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-lg bg-bear-primary/10 text-bear-primary group-hover:bg-bear-primary/20 transition-colors">
+                      <div className="p-2 rounded-lg bg-hema-primary/10 text-hema-primary group-hover:bg-hema-primary/20 transition-colors">
                         <suggestion.icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-medium text-sm text-bear-text-light dark:text-bear-text-dark mb-0.5">
+                        <h3 className="font-medium text-sm text-hema-text-light dark:text-hema-text-dark mb-0.5">
                           {suggestion.title}
                         </h3>
-                        <p className="text-xs text-bear-text-secondary-light dark:text-bear-text-secondary-dark">
+                        <p className="text-xs text-hema-text-secondary-light dark:text-hema-text-secondary-dark">
                           {suggestion.description}
                         </p>
                       </div>

@@ -13,19 +13,19 @@ function Message({ message }) {
   }
 
   return (
-    <div className={`group py-6 ${isUser ? '' : 'bg-bear-message-light dark:bg-bear-message-dark'}`}>
+    <div className={`group py-6 ${isUser ? '' : 'bg-hema-message-light dark:bg-hema-message-dark'}`}>
       <div className="max-w-3xl mx-auto px-4 md:px-6">
         <div className="flex gap-4">
           {/* Avatar */}
           <div className={`
             flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center
             ${isUser
-              ? 'bg-bear-text-secondary-light/20 dark:bg-bear-text-secondary-dark/20'
-              : 'bg-gradient-to-br from-bear-primary to-bear-primary-dark'
+              ? 'bg-hema-text-secondary-light/20 dark:bg-hema-text-secondary-dark/20'
+              : 'bg-gradient-to-br from-hema-primary to-hema-primary-dark'
             }
           `}>
             {isUser ? (
-              <User className="w-5 h-5 text-bear-text-secondary-light dark:text-bear-text-secondary-dark" />
+              <User className="w-5 h-5 text-hema-text-secondary-light dark:text-hema-text-secondary-dark" />
             ) : (
               <Zap className="w-5 h-5 text-white" />
             )}
@@ -34,7 +34,7 @@ function Message({ message }) {
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              <span className="font-medium text-sm text-bear-text-light dark:text-bear-text-dark">
+              <span className="font-medium text-sm text-hema-text-light dark:text-hema-text-dark">
                 {isUser ? 'You' : 'HEMA'}
               </span>
             </div>
@@ -42,7 +42,7 @@ function Message({ message }) {
             <div className="prose dark:prose-invert prose-sm max-w-none text-sm">
               {message.isStreaming ? (
                 <div className="flex items-center gap-1">
-                  <span className="text-bear-text-light dark:text-bear-text-dark">
+                  <span className="text-hema-text-light dark:text-hema-text-dark">
                     {message.content}
                   </span>
                   <span className="typing-cursor" />
@@ -51,7 +51,7 @@ function Message({ message }) {
                 <ReactMarkdown
                   components={{
                     p: ({ children }) => (
-                      <p className="mb-3 last:mb-0 text-bear-text-light dark:text-bear-text-dark">
+                      <p className="mb-3 last:mb-0 text-hema-text-light dark:text-hema-text-dark">
                         {children}
                       </p>
                     ),
@@ -66,17 +66,17 @@ function Message({ message }) {
                       </ol>
                     ),
                     li: ({ children }) => (
-                      <li className="text-bear-text-light dark:text-bear-text-dark">
+                      <li className="text-hema-text-light dark:text-hema-text-dark">
                         {children}
                       </li>
                     ),
                     code: ({ inline, children }) => (
                       inline ? (
-                        <code className="px-1.5 py-0.5 rounded bg-bear-hover-light dark:bg-bear-hover-dark text-bear-primary font-mono text-sm">
+                        <code className="px-1.5 py-0.5 rounded bg-hema-hover-light dark:bg-hema-hover-dark text-hema-primary font-mono text-sm">
                           {children}
                         </code>
                       ) : (
-                        <code className="block p-3 rounded-lg bg-bear-sidebar-light dark:bg-bear-sidebar-dark font-mono text-sm overflow-x-auto">
+                        <code className="block p-3 rounded-lg bg-hema-sidebar-light dark:bg-hema-sidebar-dark font-mono text-sm overflow-x-auto">
                           {children}
                         </code>
                       )
@@ -87,17 +87,17 @@ function Message({ message }) {
                       </pre>
                     ),
                     h1: ({ children }) => (
-                      <h1 className="text-xl font-bold mb-3 text-bear-text-light dark:text-bear-text-dark">
+                      <h1 className="text-xl font-bold mb-3 text-hema-text-light dark:text-hema-text-dark">
                         {children}
                       </h1>
                     ),
                     h2: ({ children }) => (
-                      <h2 className="text-lg font-bold mb-2 text-bear-text-light dark:text-bear-text-dark">
+                      <h2 className="text-lg font-bold mb-2 text-hema-text-light dark:text-hema-text-dark">
                         {children}
                       </h2>
                     ),
                     h3: ({ children }) => (
-                      <h3 className="text-base font-bold mb-2 text-bear-text-light dark:text-bear-text-dark">
+                      <h3 className="text-base font-bold mb-2 text-hema-text-light dark:text-hema-text-dark">
                         {children}
                       </h3>
                     ),
@@ -109,7 +109,7 @@ function Message({ message }) {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-bear-primary hover:underline"
+                        className="text-hema-primary hover:underline"
                       >
                         {children}
                       </a>
@@ -126,13 +126,13 @@ function Message({ message }) {
               <div className="flex items-center gap-2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
                 <button
                   onClick={handleCopy}
-                  className="p-1.5 rounded-lg hover:bg-bear-hover-light dark:hover:bg-bear-hover-dark transition-colors"
+                  className="p-1.5 rounded-lg hover:bg-hema-hover-light dark:hover:bg-hema-hover-dark transition-colors"
                   aria-label="Copy message"
                 >
                   {copied ? (
-                    <Check className="w-4 h-4 text-bear-primary" />
+                    <Check className="w-4 h-4 text-hema-primary" />
                   ) : (
-                    <Copy className="w-4 h-4 text-bear-text-secondary-light dark:text-bear-text-secondary-dark" />
+                    <Copy className="w-4 h-4 text-hema-text-secondary-light dark:text-hema-text-secondary-dark" />
                   )}
                 </button>
               </div>

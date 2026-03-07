@@ -78,7 +78,7 @@ function App() {
   }
 
   return (
-    <div className={`flex h-screen bg-bear-bg-light dark:bg-bear-bg-dark transition-theme`}>
+    <div className={`flex h-screen bg-hema-bg-light dark:bg-hema-bg-dark transition-theme`}>
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}

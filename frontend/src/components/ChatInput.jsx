@@ -32,14 +32,14 @@ function ChatInput({ onSendMessage, isLoading, onStopGeneration }) {
   }
 
   return (
-    <div className="border-t border-bear-border-light dark:border-bear-border-dark bg-bear-bg-light dark:bg-bear-bg-dark">
+    <div className="border-t border-hema-border-light dark:border-hema-border-dark bg-hema-bg-light dark:bg-hema-bg-dark">
       <div className="max-w-3xl mx-auto px-4 py-4">
         <form onSubmit={handleSubmit} className="relative">
-          <div className="flex items-end gap-2 p-2 rounded-2xl border border-bear-border-light dark:border-bear-border-dark bg-bear-input-light dark:bg-bear-input-dark focus-within:border-bear-primary focus-within:ring-1 focus-within:ring-bear-primary transition-all">
+          <div className="flex items-end gap-2 p-2 rounded-2xl border border-hema-border-light dark:border-hema-border-dark bg-hema-input-light dark:bg-hema-input-dark focus-within:border-hema-primary focus-within:ring-1 focus-within:ring-hema-primary transition-all">
             {/* Attachment button (placeholder for future) */}
             <button
               type="button"
-              className="p-2 rounded-lg hover:bg-bear-hover-light dark:hover:bg-bear-hover-dark transition-colors text-bear-text-secondary-light dark:text-bear-text-secondary-dark"
+              className="p-2 rounded-lg hover:bg-hema-hover-light dark:hover:bg-hema-hover-dark transition-colors text-hema-text-secondary-light dark:text-hema-text-secondary-dark"
               aria-label="Attach file"
               title="Attach file (coming soon)"
             >
@@ -54,7 +54,7 @@ function ChatInput({ onSendMessage, isLoading, onStopGeneration }) {
               onKeyDown={handleKeyDown}
               placeholder="Ask about energy usage, get recommendations, or control devices..."
               rows={1}
-              className="flex-1 resize-none bg-transparent border-none outline-none text-bear-text-light dark:text-bear-text-dark placeholder-bear-text-secondary-light dark:placeholder-bear-text-secondary-dark text-sm py-2 px-1 max-h-[200px] custom-scrollbar"
+              className="flex-1 resize-none bg-transparent border-none outline-none text-hema-text-light dark:text-hema-text-dark placeholder-hema-text-secondary-light dark:placeholder-hema-text-secondary-dark text-sm py-2 px-1 max-h-[200px] custom-scrollbar"
               disabled={isLoading}
             />
 
@@ -63,10 +63,10 @@ function ChatInput({ onSendMessage, isLoading, onStopGeneration }) {
               <button
                 type="button"
                 onClick={onStopGeneration}
-                className="p-2 rounded-lg bg-bear-text-secondary-light/20 dark:bg-bear-text-secondary-dark/20 hover:bg-bear-text-secondary-light/30 dark:hover:bg-bear-text-secondary-dark/30 transition-colors"
+                className="p-2 rounded-lg bg-hema-text-secondary-light/20 dark:bg-hema-text-secondary-dark/20 hover:bg-hema-text-secondary-light/30 dark:hover:bg-hema-text-secondary-dark/30 transition-colors"
                 aria-label="Stop generation"
               >
-                <Square className="w-5 h-5 text-bear-text-light dark:text-bear-text-dark" />
+                <Square className="w-5 h-5 text-hema-text-light dark:text-hema-text-dark" />
               </button>
             ) : (
               <button
@@ -74,8 +74,8 @@ function ChatInput({ onSendMessage, isLoading, onStopGeneration }) {
                 disabled={!message.trim()}
                 className={`p-2 rounded-lg transition-all ${
                   message.trim()
-                    ? 'bg-bear-primary hover:bg-bear-primary-dark text-white'
-                    : 'bg-bear-text-secondary-light/20 dark:bg-bear-text-secondary-dark/20 text-bear-text-secondary-light dark:text-bear-text-secondary-dark cursor-not-allowed'
+                    ? 'bg-hema-primary hover:bg-hema-primary-dark text-white'
+                    : 'bg-hema-text-secondary-light/20 dark:bg-hema-text-secondary-dark/20 text-hema-text-secondary-light dark:text-hema-text-secondary-dark cursor-not-allowed'
                 }`}
                 aria-label="Send message"
               >
@@ -86,8 +86,8 @@ function ChatInput({ onSendMessage, isLoading, onStopGeneration }) {
         </form>
 
         {/* Disclaimer */}
-        <p className="text-xs text-center text-bear-text-secondary-light dark:text-bear-text-secondary-dark mt-2">
-          BEAR provides energy insights and recommendations. Always verify important decisions.
+        <p className="text-xs text-center text-hema-text-secondary-light dark:text-hema-text-secondary-dark mt-2">
+          HEMA provides energy insights and recommendations. Always verify important decisions.
         </p>
       </div>
     </div>

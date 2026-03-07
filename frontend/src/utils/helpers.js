@@ -1,4 +1,4 @@
-// Utility functions for the BEAR chat application
+// Utility functions for the HEMA chat application
 
 /**
  * Generate a unique session ID
