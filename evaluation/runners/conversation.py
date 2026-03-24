@@ -384,6 +384,14 @@ def run_single_evaluation(
     )
     record = runner.run()
 
+    # Extract ground truth from data cache (populated during conversation by Analysis tools)
+    ground_truth = None
+    try:
+        from evaluation.data.ground_truth import get_current_ground_truth
+        ground_truth = get_current_ground_truth()
+    except Exception:
+        pass  # Ground truth is optional
+
     # Evaluate the conversation
     evaluator = evaluator or ConversationEvaluator()
     result = evaluator.evaluate(
@@ -391,6 +399,7 @@ def run_single_evaluation(
         persona=persona,
         scenario=scenario,
         goal_signaled=record.goal_signaled,
+        ground_truth=ground_truth,
     )
 
     return result
@@ -481,6 +490,14 @@ def run_full_experiment(
     # Get turn metrics for system performance calculation
     turn_metrics = runner.get_turn_metrics()
 
+    # Extract ground truth from data cache (populated during conversation by Analysis tools)
+    ground_truth = None
+    try:
+        from evaluation.data.ground_truth import get_current_ground_truth
+        ground_truth = get_current_ground_truth()
+    except Exception:
+        pass  # Ground truth is optional
+
     # Evaluate conversation using objective metrics
     evaluator = evaluator or ConversationEvaluator()
     eval_result = evaluator.evaluate(
@@ -488,6 +505,7 @@ def run_full_experiment(
         persona=persona,
         scenario=scenario,
         goal_signaled=record.goal_signaled,
+        ground_truth=ground_truth,
     )
 
     # Calculate task completion metrics
