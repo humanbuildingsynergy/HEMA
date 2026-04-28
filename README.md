@@ -525,7 +525,20 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ## Citation
 
-A journal article describing HEMA has been submitted to SoftwareX. Citation information will be added upon acceptance.
+If you use HEMA in your research, please cite the following paper:
+
+```bibtex
+@article{Jung2026HEMA,
+  author  = {Wooyoung Jung},
+  title   = {Multi-Agent Home Energy Management Assistant},
+  journal = {SoftwareX},
+  year    = {2026},
+  doi     = {10.1016/j.softx.2026.102633},
+  url     = {https://doi.org/10.1016/j.softx.2026.102633}
+}
+```
+
+Jung, W. (2026). Multi-Agent Home Energy Management Assistant. *SoftwareX*. https://doi.org/10.1016/j.softx.2026.102633
 
 ## Support & Contributing
 
