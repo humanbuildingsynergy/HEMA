@@ -4,6 +4,11 @@ _archive
 __pycache__/
 deprecated
 
+# Python virtual environment
+venv/
+.venv/
+env/
+
 # Frontend
 node_modules/
 frontend/node_modules/
